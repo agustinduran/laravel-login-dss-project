@@ -31,6 +31,12 @@
             <main>
                 {{ $slot }}
             </main>
+            
+            <footer class="bg-gray-100 text-black mt-8">
+                <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+                    <p class="text-left text-sm">Grupo conformado por: Agustín Durán y Gloria Villasanti</p>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
