@@ -9,6 +9,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+                    @if(session('success'))
+                        <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                     <form action="{{ url('/upload') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <label for="file" class="block text-gray-700 dark:text-gray-300 font-semibold mb-1">Subir Archivo:</label>
@@ -17,7 +22,6 @@
                         <x-primary-button type="submit" class="mt-3 hover:bg-blue-600">
                             Subir
                         </x-primary-button>
-                        <!-- TODO: lang -->
                     </form>
                 </div>
             </div>
